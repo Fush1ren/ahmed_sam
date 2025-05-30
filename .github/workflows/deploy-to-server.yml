@@ -1,6 +1,9 @@
 name: Build and Deploy to Server
 
-on: [push]
+on: 
+  push:
+    branches:
+      main
 
 jobs:
   build:
@@ -30,7 +33,7 @@ jobs:
     name: Copy to dev
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/dev'
+    if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
