@@ -4,7 +4,7 @@
   "main": "dist/bot.js",
   "scripts": {
     "start": "rimraf dist && npx tsc && node .",
-    "build": "rimraf dist && npx tsc"
+    "build": "rimraf dist && cp .env ./dist/.env && npx tsc"
   },
   "keywords": [],
   "author": "",
