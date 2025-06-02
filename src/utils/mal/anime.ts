@@ -10,7 +10,7 @@ const MyAnimeList = {
             page: page,
         } as AnimeSearchParams;
         const { data } = await MyAnimeListService.getSearchAnime(params);
-        return data;
+        return data.data;
         } catch (error) {
             console.error("Error fetching anime:", error);
             throw error;
