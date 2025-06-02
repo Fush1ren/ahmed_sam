@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder, Colors } from "discord.js"
 import { SlashCommand } from "../types";
-import MyAnimeList from "src/utils/mal/anime";
+import MyAnimeList from "../utils/mal/anime";
 
 const command : SlashCommand = {
     command: new SlashCommandBuilder()
